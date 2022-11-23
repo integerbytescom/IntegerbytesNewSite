@@ -3,7 +3,6 @@ import {Fade} from "react-awesome-reveal";
 
 const FooterBottom = ({lang}) => {
     return (
-        <Fade direction={"up"}>
             <footer className={"FooterBottom"}>
                 <img
                     style={{zIndex:-1}}
@@ -12,9 +11,10 @@ const FooterBottom = ({lang}) => {
                     className={"footer-dots-img"}
                 />
 
-                <p>INTEGERBYTES {new Date().getFullYear()} © {lang === 'rus' ? 'Все права защищены' : 'All rights reserved'}</p>
+                <Fade direction={"up"}>
+                    <p>INTEGERBYTES {new Date().getFullYear()} © {lang === 'rus' ? 'Все права защищены' : 'All rights reserved'}</p>
+                </Fade>
             </footer>
-        </Fade>
     );
 };
 

@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Button, Placeholder} from "react-bootstrap";
 import {useGetImages} from "../../../hooks/useGetImages";
-import TeamModal from "./TeamModal";
 import {handleDeleteDB} from "../../../functions/handleDeleteDB";
 
 const TeamCard = ({elem,admin,lang}) => {

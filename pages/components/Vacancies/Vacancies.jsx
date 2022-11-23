@@ -1,9 +1,22 @@
 import React, {useState} from 'react';
-import {Accordion} from "react-bootstrap";
+import {Accordion,Form} from "react-bootstrap";
 import VacanciesModal from "./VacanciesModal";
 import {Fade} from "react-awesome-reveal";
+import {useGetData} from "../../../hooks/useGetData";
+import {ref, update} from "firebase/database";
+import {realtimeDB} from "../../database";
 
-const Vacancies = ({lang}) => {
+
+const Vacancies = ({lang,admin}) => {
+
+    const dataVacancy = useGetData(`/blocks/vacancy`);
+
+    const setShowBlock = value => {
+        update(ref(realtimeDB, `/blocks/vacancy/`),{
+            show: value,
+        })
+            .then(console.log)
+    }
 
     const data = [
         {
@@ -157,58 +170,71 @@ const Vacancies = ({lang}) => {
         setShow(true);
     }
 
-    return (
-        <>
-            <div className={'Vacancies'}>
-                <h2>
-                    {lang === "rus" && "Актуальные вакансии"}
-                    {lang === "eng" && "Current vacancies"}
-                </h2>
+    if(dataVacancy[0] || admin){
+        return (
+            <>
+                <div className={'Vacancies'}>
+                    <h2>
+                        {lang === "rus" && "Актуальные вакансии"}
+                        {lang === "eng" && "Current vacancies"}
+                    </h2>
 
-                <Fade direction={"up"}>
-                    <div className="vacancies-container">
-                        <img
-                            src="/images-dev/components/Vacancies/vacancies.png"
-                            alt="vacancies"
-                            className={"vaacncies-img"}
+                    {
+                        admin &&
+                        <Form.Check
+                            type="switch"
+                            id="custom-switch"
+                            label="Hide this block"
+                            checked={!dataVacancy[0]}
+                            onChange={() => setShowBlock(!dataVacancy[0])}
                         />
+                    }
 
-                        <Accordion defaultActiveKey="1" flush>
-                            {
-                                data.map(elem => (
-                                    <Accordion.Item eventKey={elem.id} key={elem.id}>
-                                        <Accordion.Header>{elem.title}</Accordion.Header>
-                                        <Accordion.Body className={"small"}>
-                                            {elem.list.map(item => (
-                                                <div key={item.title}>
-                                                    <h6>{item.title}</h6>
-                                                    <ul>
-                                                        {
-                                                            item.ul.map(item => (
-                                                                <li key={item}>{item}</li>
-                                                            ))
-                                                        }
-                                                    </ul>
-                                                </div>
-                                            ))}
-                                            <br/>
-                                            <button onClick={() => openModal(elem.title)} className={"out-pill-white-button"}>
-                                                {lang === "rus" ? "Откликнуться" : "Respond"}
-                                            </button>
-                                            <br/><br/>
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                ))
-                            }
-                        </Accordion>
-                    </div>
-                </Fade>
-            </div>
+                    <Fade direction={"up"}>
+                        <div className="vacancies-container">
+                            <img
+                                src="/images-dev/components/Vacancies/vacancies.png"
+                                alt="vacancies"
+                                className={"vaacncies-img"}
+                            />
 
-            {/*modal*/}
-            <VacanciesModal show={show} onHide={() => setShow(false)} data={modalData} lang={lang} />
-        </>
-    );
+                            <Accordion defaultActiveKey="1" flush>
+                                {
+                                    data.map(elem => (
+                                        <Accordion.Item eventKey={elem.id} key={elem.id}>
+                                            <Accordion.Header>{elem.title}</Accordion.Header>
+                                            <Accordion.Body className={"small"}>
+                                                {elem.list.map(item => (
+                                                    <div key={item.title}>
+                                                        <h6>{item.title}</h6>
+                                                        <ul>
+                                                            {
+                                                                item.ul.map(item => (
+                                                                    <li key={item}>{item}</li>
+                                                                ))
+                                                            }
+                                                        </ul>
+                                                    </div>
+                                                ))}
+                                                <br/>
+                                                <button onClick={() => openModal(elem.title)} className={"out-pill-white-button"}>
+                                                    {lang === "rus" ? "Откликнуться" : "Respond"}
+                                                </button>
+                                                <br/><br/>
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    ))
+                                }
+                            </Accordion>
+                        </div>
+                    </Fade>
+                </div>
+
+                {/*modal*/}
+                <VacanciesModal show={show} onHide={() => setShow(false)} data={modalData} lang={lang} />
+            </>
+        );
+    }
 };
 
 export default Vacancies;

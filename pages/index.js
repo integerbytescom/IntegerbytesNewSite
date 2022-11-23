@@ -48,7 +48,7 @@ export default function Home({admin}) {
           <div className={"container"}>
               <Preview lang={lang} />
               <Services lang={lang} />
-              <Vacancies lang={lang} />
+              <Vacancies admin={admin} lang={lang} />
               <About lang={lang} />
               <AboutProducts lang={lang} />
               <Team admin={admin} lang={lang} />

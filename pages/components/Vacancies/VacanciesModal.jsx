@@ -1,5 +1,5 @@
 import React, {useState,useRef} from 'react';
-import {Button, CloseButton, Form, Modal, Spinner} from "react-bootstrap";
+import {CloseButton, Form, Modal, Spinner} from "react-bootstrap";
 import * as emailjs from "@emailjs/browser";
 
 const VacanciesModal = ({show,onHide,data,lang}) => {

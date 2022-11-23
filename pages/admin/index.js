@@ -3,7 +3,8 @@ import Home from "../index";
 
 const Index = () => {
     return (
-        <div className={"Index"}>
+        <div>
+            {/*prodaction havnt redact*/}
             <Home admin={true} />
         </div>
     );

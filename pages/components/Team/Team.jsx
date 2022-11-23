@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Button} from "react-bootstrap";
 import {useGetData} from "../../../hooks/useGetData";
-import {useGetImages} from "../../../hooks/useGetImages";
 import TeamCard from "./TeamCard";
 import TeamModal from "./TeamModal";
 

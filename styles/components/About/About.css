@@ -20,5 +20,6 @@
 }
 
 .About img{
+    z-index: 3;
     width: 50%;
 }
