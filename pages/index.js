@@ -12,7 +12,7 @@ import FooterBottom from "./general-components/FooterBottom/FooterBottom";
 import 'animate.css';
 
 
-export default function Home() {
+export default function Home({admin}) {
 
     //lang value
     const [lang,setLang] = useState("eng");
@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
       <>
-          <NavbarTop handleSetLang={handleSetLang} lang={lang} />
+          <NavbarTop handleSetLang={handleSetLang} lang={lang} admin={admin} />
 
           {/* images */}
           <BgImages />
@@ -51,7 +51,7 @@ export default function Home() {
               <Vacancies lang={lang} />
               <About lang={lang} />
               <AboutProducts lang={lang} />
-              <Team lang={lang} />
+              <Team admin={true} lang={lang} />
               <Contacts lang={lang} />
           </div>
 

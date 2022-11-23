@@ -2,7 +2,7 @@ import React from 'react';
 import {Navbar} from "react-bootstrap";
 import {Slide} from "react-awesome-reveal";
 
-const NavbarTop = ({handleSetLang,lang}) => {
+const NavbarTop = ({handleSetLang,lang,admin}) => {
 
 
     return (
@@ -17,7 +17,9 @@ const NavbarTop = ({handleSetLang,lang}) => {
                         />
 
                         <span className={"text-logo"}>
-                            <h3>Integerbytes</h3>
+                            <h3>
+                                {admin ? "Admin" : "Integerbytes"}
+                            </h3>
                             <p className={"small"}>IT company</p>
                         </span>
                     </Navbar.Brand>

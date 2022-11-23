@@ -1,6 +1,10 @@
 import React from 'react';
+import {Button} from "react-bootstrap";
+import {useGetData} from "../../../hooks/useGetData";
+import {useGetImages} from "../../../hooks/useGetImages";
+import TeamCard from "./TeamCard";
 
-const Team = ({lang}) => {
+const Team = ({lang,admin}) => {
 
     const data = [
         {
@@ -29,6 +33,8 @@ const Team = ({lang}) => {
         },
     ];
 
+    const dataDatabase = useGetData(`/blocks/${lang}/team`);
+
     return (
         <div className={"Team"}>
             <h2>{lang === 'rus' ? 'Наша команда' : 'Our team'}</h2>
@@ -36,19 +42,22 @@ const Team = ({lang}) => {
             <div className="block-container">
 
                 {
-                    data.map(elem => (
-                        <div key={elem.id} className="team-block">
-                            <img src={elem.img} alt={elem.title}/>
-                            <div className="inner">
-                                <h5 className={"mb-1"}>{elem.title}</h5>
-                                <div className="line" />
-                                <p className={"small"}>{elem.text}</p>
-                            </div>
-                        </div>
+                    dataDatabase.length &&
+                    dataDatabase.map(elem => (
+                       <TeamCard key={elem.id} elem={elem} admin={admin} />
                     ))
                 }
 
             </div>
+
+            {
+                admin &&
+                <div className={"w-100 my-3 d-flex justify-content-center"}>
+                    <Button size={"sm"} variant={"light"}>
+                        Add new block
+                    </Button>
+                </div>
+            }
         </div>
     );
 };
