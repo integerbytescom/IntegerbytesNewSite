@@ -3,7 +3,7 @@
 }
 .Team h2{
     font-weight: 100;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 .Team .block-container{
     display: flex;
@@ -12,6 +12,7 @@
 }
 
 .team-block{
+    margin-top: 1em;
     width: calc(25% - 1em);
 }
 .team-block img{

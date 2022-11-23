@@ -2,7 +2,8 @@
 
 }
 
-.VacanciesModal .modal-content{
+.VacanciesModal .modal-content,
+.TeamModal .modal-content{
     padding: 1.5em;
     background: var(--dark-purple-sec);
 }

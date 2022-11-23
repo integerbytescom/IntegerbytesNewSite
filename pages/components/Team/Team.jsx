@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button} from "react-bootstrap";
 import {useGetData} from "../../../hooks/useGetData";
 import {useGetImages} from "../../../hooks/useGetImages";
 import TeamCard from "./TeamCard";
+import TeamModal from "./TeamModal";
 
 const Team = ({lang,admin}) => {
 
@@ -33,33 +34,38 @@ const Team = ({lang,admin}) => {
         },
     ];
 
+    const [showModal,setModalShow] = useState(false);
+
     const dataDatabase = useGetData(`/blocks/${lang}/team`);
 
-    return (
-        <div className={"Team"}>
-            <h2>{lang === 'rus' ? 'Наша команда' : 'Our team'}</h2>
+    if(Boolean(dataDatabase.length) || admin){
+        return (
+            <div className={"Team"}>
+                <h2>{lang === 'rus' ? 'Наша команда' : 'Our team'}</h2>
 
-            <div className="block-container">
+                <div className="block-container">
+
+                    {
+                        dataDatabase.map(elem => (
+                            <TeamCard key={elem.id} elem={elem} admin={admin} lang={lang} />
+                        ))
+                    }
+
+                </div>
 
                 {
-                    dataDatabase.length &&
-                    dataDatabase.map(elem => (
-                       <TeamCard key={elem.id} elem={elem} admin={admin} />
-                    ))
+                    admin &&
+                    <div className={"w-100 my-3 d-flex justify-content-center"}>
+                        <Button size={"sm"} variant={"light"} onClick={() => setModalShow(true)}>
+                            Add new block
+                        </Button>
+                    </div>
                 }
 
+                <TeamModal show={showModal} onHide={() => setModalShow(false)} lang={lang} />
             </div>
-
-            {
-                admin &&
-                <div className={"w-100 my-3 d-flex justify-content-center"}>
-                    <Button size={"sm"} variant={"light"}>
-                        Add new block
-                    </Button>
-                </div>
-            }
-        </div>
-    );
+        );
+    }
 };
 
 export default Team;

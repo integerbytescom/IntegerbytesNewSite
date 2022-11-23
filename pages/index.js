@@ -51,7 +51,7 @@ export default function Home({admin}) {
               <Vacancies lang={lang} />
               <About lang={lang} />
               <AboutProducts lang={lang} />
-              <Team admin={true} lang={lang} />
+              <Team admin={admin} lang={lang} />
               <Contacts lang={lang} />
           </div>
 
