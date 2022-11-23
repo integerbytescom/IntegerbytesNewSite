@@ -1,0 +1,12 @@
+@media screen and (max-width: 1000px) {
+    .Vacancies img{
+       display: none;
+    }
+    .accordion.accordion-flush{
+        width: 100%;
+        margin: 1em 0;
+    }
+    .Vacancies .vacancies-container{
+        padding: 1em 0 0;
+    }
+}

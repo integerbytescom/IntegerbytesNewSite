@@ -1,0 +1,30 @@
+.AboutProducts{
+    position:relative;
+    padding: 12em 0 10em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.AboutProducts .block{
+    width: calc(25% - 2em);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 100;
+}
+
+.AboutProducts .block img{
+    height: 70px;
+    margin-bottom: 2em;
+}
+
+.AboutProducts .block h4{
+    font-weight: 300;
+    text-align: center;
+}
+
+.AboutProducts .block p.small{
+    opacity: .8;
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+@media screen and (max-width: 850px) {
+    .team-block img{
+        border-bottom-left-radius: 1em;
+        border-top-right-radius: 1em;
+    }
+    .team-block .inner{
+        margin: .4em 0;
+        padding: 0 .5em;
+    }
+}
+@media screen and (max-width: 768px) {
+    .team-block{
+        width: calc(33% - 1em);
+    }
+}
+@media screen and (max-width: 485px) {
+    .Team h2{
+        margin-bottom: .5em;
+    }
+    .team-block{
+        width: calc(50% - .5em);
+    }
+}
+

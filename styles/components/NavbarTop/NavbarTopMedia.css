@@ -1,0 +1,23 @@
+@media screen and (max-width: 1200px) {
+    span.navbar-brand img{
+        width: 40px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .right a.out-pill-white-button{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    div.lang-container{
+        display: none !important;
+    }
+    span.navbar-brand img{
+        width: 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    div.right{
+        display: none !important;
+    }
+}

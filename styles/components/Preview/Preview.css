@@ -1,0 +1,32 @@
+.Preview{
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Preview .text-container{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.Preview .text-container h1,
+.Preview .text-container p{
+    margin: 0;
+    font-weight: lighter;
+    opacity: .8;
+}
+
+.Preview .text-container p a{
+    color: var(--logo-yellow);
+    text-decoration: none;
+    transition: .3s;
+}
+.Preview .text-container p a:hover{
+    color: var(--bs-white);
+}
+
+.Preview img{
+    width: 50%;
+    margin-bottom: -15%;
+}

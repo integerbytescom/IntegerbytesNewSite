@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+    .About{
+        flex-wrap: wrap;
+    }
+    .About .bot-img{display: none;}
+    .About .top-img{
+        width: 50%;
+        display: block;
+        margin: 0 auto 1em;
+    }
+    .About .text{
+        width: 100%;
+    }
+}

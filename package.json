@@ -1,0 +1,25 @@
+{
+  "name": "integerbytes-official-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.9.1",
+    "@emotion/react": "^11.10.5",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.2",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.4",
+    "next": "^13.0.4",
+    "react": "18.2.0",
+    "react-awesome-reveal": "^4.1.0",
+    "react-bootstrap": "^2.6.0",
+    "react-dom": "18.2.0",
+    "swiper": "^8.4.4"
+  }
+}

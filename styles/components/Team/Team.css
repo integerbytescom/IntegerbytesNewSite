@@ -1,0 +1,44 @@
+.Team{
+    padding: 3em 0 6em;
+}
+.Team h2{
+    font-weight: 100;
+    margin-bottom: 1.5em;
+}
+.Team .block-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team-block{
+    width: calc(25% - 1em);
+}
+.team-block img{
+    width: 100%;
+    opacity: .95;
+    border-bottom-left-radius: 3em;
+    border-top-right-radius: 3em;
+}
+.team-block .inner{
+    margin: 1em 0;
+    padding: 0 1em;
+    border-left:1px solid rgba(255, 255, 255, .75);
+    /*border-bottom:1px solid rgba(255, 255, 255, .75);*/
+}
+.team-block .inner h5{
+    padding-top: .5em;
+    font-weight: 100;
+}
+.team-block .inner p.small{
+    font-weight: 100;
+    opacity: .75;
+    padding-bottom: 1em;
+}
+
+.line{
+    width: 15%;
+    height: 1px;
+    margin: .5em 0 .25em;
+    background: var(--logo-yellow);
+}

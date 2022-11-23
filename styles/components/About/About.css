@@ -1,0 +1,24 @@
+.About{
+    padding: 8em 0 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.About .top-img{
+    display: none;
+}
+
+.About .text{
+    width: 45%;
+}
+.About h2{
+    font-weight: 300;
+}
+.About p{
+    font-weight: 100;
+}
+
+.About img{
+    width: 50%;
+}

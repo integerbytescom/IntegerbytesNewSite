@@ -1,0 +1,84 @@
+.Contacts{
+    padding: 5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Contacts .block-text,
+.Contacts form{
+    width: 40%;
+}
+.Contacts .block-text a{
+    text-decoration: none;
+}
+.Contacts .block-text h2{
+    font-weight: 700;
+    margin-bottom: 1.5em;
+}
+.Contacts .block-text h4{
+    font-weight: 700;
+    margin: 0;
+    transition: .3s;
+}
+.Contacts .block-text h5{
+    font-weight: 100;
+    transition: .3s;
+}
+.Contacts .block-text h5.email{
+    margin-bottom: 1.5em;
+}
+
+.Contacts .block-text h4:hover,
+.Contacts .block-text h5.email:hover{
+    color: var(--logo-yellow);
+}
+
+.Contacts form{
+    display: flex;
+    flex-direction: column;
+}
+.Contacts form h4{
+    font-weight: 100;
+    margin-bottom: 1em;
+    opacity: .75;
+    color: var(--logo-yellow);
+}
+.VacanciesModal form input,
+.Contacts form input,
+.Contacts form textarea{
+    padding: 1em .25em;
+    resize: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    transition: .3s;
+}
+.VacanciesModal form input:hover,
+.VacanciesModal form input:active,
+.VacanciesModal form input:focus,
+.Contacts form input:hover,
+.Contacts form input:active,
+.Contacts form input:focus{
+    border-bottom: 1px solid var(--logo-yellow);
+}
+
+.VacanciesModal form input:focus,
+.Contacts form input:focus,
+.Contacts form textarea:focus{
+    outline: none;
+}
+.Contacts form textarea{
+    border: none;
+    margin-bottom: 2em;
+}
+
+p.res-p{
+    margin-bottom: 2em;
+}
+p.res-p.success{
+    color: #18c018;
+}
+p.res-p.error{
+    color: #d31515;
+}

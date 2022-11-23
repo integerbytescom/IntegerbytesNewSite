@@ -1,0 +1,27 @@
+.Services{
+    padding: 3em 0;
+}
+
+.Services h2{
+    font-weight: 100;
+    margin-bottom: 1em;
+}
+
+.Services .services-containers{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*card*/
+.Services .services-containers .card{
+    width: calc(33% - .3em) !important;
+    background: none;
+    border: none;
+}
+.Services .services-containers .card .card-body{
+    font-weight: 200;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.Services .services-containers .card .card-body p{
+    opacity: .75;
+}

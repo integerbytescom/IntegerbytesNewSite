@@ -1,0 +1,40 @@
+.waves-bg{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.circle-big{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: .5;
+    z-index: -1;
+}
+
+.circle-small{
+    width: auto;
+    position: absolute;
+    opacity: .5;
+    z-index: -1;
+}
+
+.lines-old{
+    width: 150%;
+    position: absolute;
+    opacity: .7;
+    z-index: -1;
+}
+
+@media screen and (max-width:700px) {
+    .circle-big{
+        width: 150%;
+        right: -75% !important;
+    }
+}
+@media screen and (max-width:500px) {
+    .circle-big{
+        width: 300%;
+        right: -150% !important;
+    }
+}

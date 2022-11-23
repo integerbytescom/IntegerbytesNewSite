@@ -1,0 +1,48 @@
+*{
+    color: var(--bs-white);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root{
+    --logo-yellow: #FFC734;
+    --logo-blue:#006FB2;
+    --dark-purple-one:#050023;
+    --dark-purple-sec: rgba(0, 0, 50);
+    --dark-purple-95: rgba(0, 0, 50, .95);
+    --dark-purple-9: rgba(0, 0, 50, .9);
+    --dark-purple-85: rgba(0, 0, 50, .85);
+    --dark-purple-8: rgba(0, 0, 50, .8);
+}
+
+body{
+    background: var(--dark-purple-one);
+    color: var(--bs-white);
+    overflow-x: hidden !important;
+}
+
+/*text sizes*/
+p.small{font-size: 13px !important;}
+p,a,button,li{font-size: 15px !important;}
+h1{font-size: 4em !important;}
+h2{font-size: 3em !important;}
+
+@media screen and (max-width: 1400px) {
+    /*text sizes*/
+    p.small{font-size: 12px !important;}
+    p,a,button,li{font-size: 14px !important;}
+    h1{font-size: 3.2em !important;}
+    h2{font-size: 2em !important;}
+    h3{font-size: 1.2em !important;}
+}
+@media screen and (max-width: 900px) {
+    /*text sizes*/
+    p.small{font-size: 11px !important;}
+    p,a,button,li{font-size: 13px !important;}
+    h1{font-size: 2.6em !important;}
+    h2{font-size: 1.4em !important;}
+    h4{font-size: 1.1em !important;}
+    h5{font-size: 1em !important;}
+}

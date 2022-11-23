@@ -1,0 +1,33 @@
+.VacanciesModal{
+
+}
+
+.VacanciesModal .modal-content{
+    padding: 1.5em;
+    background: var(--dark-purple-sec);
+}
+.VacanciesModal .modal-content h5{
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+}
+.VacanciesModal .modal-content h5 strong{
+    color: var(--bs-white);
+    font-weight: 500;
+}
+
+.VacanciesModal .modal-content .modal-header,
+.VacanciesModal .modal-content .modal-footer{
+    border-bottom: none;
+    border-top: 0;
+}
+
+.VacanciesModal .modal-content .modal-body form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.VacanciesModal .modal-content form input{
+    width: 100%;
+    margin: .3em 0;
+}

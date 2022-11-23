@@ -1,0 +1,17 @@
+.out-pill-white-button{
+    background: none;
+    outline: none;
+    border: 1px solid var(--bs-white);
+    padding: .4em 2em;
+    font-weight: 300;
+    font-size: 15px;
+    border-radius: 2em;
+    transition: .3s;
+}
+.out-pill-white-button:hover{
+    color: var(--dark-purple-one);
+    background: var(--bs-white);
+}
+a.out-pill-white-button:hover{
+    color: var(--dark-purple-one) !important;
+}
