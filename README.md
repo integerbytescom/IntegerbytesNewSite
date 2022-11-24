@@ -2,16 +2,21 @@
 <img width="50" src="./public/images-dev/general/logo.png" />
 </p>
 
-### Getting Started with [Next.js](https://nextjs.org/)
-
-First, run the development server:
+### This site is the official site of Integerbytes company.
+### Getting Started with Create React App
 
 ```bash
-npm run dev
+# For start (dev):
+npm start
 # or
-yarn dev
+yarn start
 ```
 
-<p>This site is the official site of Integerbytes company.</p>
-<img width="50%" src="./public/new-site.png" />
+```bash
+# For build:
+npm run build
+# or
+yarn build
+```
+
 
