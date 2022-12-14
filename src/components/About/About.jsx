@@ -32,7 +32,7 @@ const About = ({lang}) => {
             </div>
 
             {/*eslint-disable-next-line*/}
-            <img className={"bot-img"} src="/images-dev/components/About/About.svg" alt="preview-image"/>
+            <img className={"bot-img"} src="/images-dev/components/About/about.svg" alt="preview-image"/>
         </div>
         </Fade>
     );

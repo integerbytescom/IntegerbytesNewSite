@@ -38,6 +38,7 @@ const Team = ({lang,admin}) => {
     const [showModal,setModalShow] = useState(false);
 
     const dataDatabase = useGetData(`/blocks/${lang}/team`);
+    console.log(dataDatabase)
 
     if(Boolean(dataDatabase.length) || admin){
         return (
@@ -47,7 +48,9 @@ const Team = ({lang,admin}) => {
                 <div className="block-container">
 
                     {
-                        dataDatabase.map(elem => (
+                        dataDatabase
+                            .sort((a,b) => a.user ? -1 : 0)
+                            .map(elem => (
                             <TeamCard key={elem.id} elem={elem} admin={admin} lang={lang} />
                         ))
                     }
