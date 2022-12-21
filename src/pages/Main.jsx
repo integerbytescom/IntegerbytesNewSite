@@ -20,10 +20,10 @@ const Main = ({lang,admin = false}) => {
             <div className={"Main container"}>
                 <Preview lang={lang} />
                 <Services lang={lang} />
-                <Vacancies admin={admin} lang={lang} />
                 <About lang={lang} />
                 <AboutProducts lang={lang} />
                 <Team admin={admin} lang={lang} />
+                <Vacancies admin={admin} lang={lang} />
                 <Contacts lang={lang} />
             </div>
             <FooterBottom />
